@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "3ef4ca9b-0972-4103-9d3c-bec027a1e9a9",
+		"name": "My First Python API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/store",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<name>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/store/My Wonderful Store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"My Wonderful Store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<name>/item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/store/My Wonderful Store/item",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"My Wonderful Store",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<name>/item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"My item\",\n    \"price\": 15.99\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/store/Another store/item",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store",
+						"Another store",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Another store\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
